@@ -1,1 +1,44 @@
-/* Denna fil skall innehålla din CSS kod */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 10vw auto 10vw;
+    grid-template-areas: 
+    'nav nav nav nav nav'
+    'ma ma ma as as'
+    'ft ft ft ft ft'
+    ;
+}
+nav {
+    grid-area: nav;
+    background-color:aquamarine
+}
+main {
+    padding:1vw;
+    margin:1vw;
+    grid-area: ma;
+
+}
+.thework{
+    display:flex;
+    flex-wrap: wrap;
+    padding:1vw;
+    margin-top:1vw;
+    background-color: brown;
+}
+.thework div {
+    width:25vw;
+    height:20vw;
+}
+aside {
+    grid-area: as;
+    background-color: crimson;
+}
+footer {
+    grid-area: ft;
+    background-color: chartreuse;
+}
