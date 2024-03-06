@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: Helvetica, sans-serif Arial, sans-serif;
 }
 body {
     display: grid;
@@ -12,33 +13,82 @@ body {
     'ma ma ma as as'
     'ft ft ft ft ft'
     ;
+    background: white;
 }
 nav {
     grid-area: nav;
-    background-color:aquamarine
+    background-color:rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    letter-spacing: 0.04vw;
+    padding-left:4vw;
+    padding-top:3vw;
+    font-size: x-large;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
 }
 main {
     padding:1vw;
     margin:1vw;
     grid-area: ma;
-
+    font-family: Helvetica, Arial, sans-serif;
 }
 .thework{
     display:flex;
     flex-wrap: wrap;
     padding:1vw;
     margin-top:1vw;
-    background-color: brown;
+    background-color: rgba(255, 255, 255, 1);
 }
 .thework div {
     width:25vw;
-    height:20vw;
+    height:fit-content;
+    font-weight: 100;
+}
+#explore {
+    margin-left: 5vw;
+    font-size: large;
+    font-weight: bold;
+}
+.digital:hover #digital-hidden {
+    display:block;
+}
+#storm {
+    width:100%;
+    padding:1vw;
 }
 aside {
     grid-area: as;
-    background-color: crimson;
+    background-color: rgb(200, 200, 200);
+    color: black;
+}
+#digital-hidden {
+    display: none;
+}
+#grans-hidden {
+    display: none;
+}
+#web-hidden {
+    display: none;
+}
+#stupid-hidden {
+    display: none;
 }
 footer {
     grid-area: ft;
-    background-color: chartreuse;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding:5vw;
+    text-align: center;
+}
+
+@media screen and (max-width:600px) {
+
+.granssnitt {
+    flex-basis: 100%;
+}
+
+.stupid {
+    flex-basis: 100%;
+}
+
 }
