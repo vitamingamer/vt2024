@@ -1,13 +1,14 @@
+@import url(https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: Helvetica, sans-serif Arial, sans-serif;
+    font-family: "Kanit", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 10vw auto 10vw;
+    grid-template-rows: 15vw auto 20vw;
     grid-template-areas: 
     'nav nav nav nav nav'
     'ma ma ma as as'
@@ -20,59 +21,97 @@ nav {
     background-color:rgb(255, 255, 255);
     color: rgb(0, 0, 0);
     letter-spacing: 0.04vw;
-    padding-left:4vw;
+    padding-left:3vw;
     padding-top:3vw;
-    font-size: x-large;
-    font-family: Helvetica, sans-serif;
-    font-weight: bold;
+    padding-bottom: 1vw;
+    font-size: xx-large;
+    font-weight: 700;
+}
+nav a {
+    text-decoration: none;
+    color: black;
+}
+nav a:hover {
+    color:white;
+    background-color: black;
 }
 main {
+    background-color: rgb(255, 255, 255);
     padding:1vw;
     margin:1vw;
     grid-area: ma;
-    font-family: Helvetica, Arial, sans-serif;
 }
 .thework{
     display:flex;
     flex-wrap: wrap;
-    padding:1vw;
+    padding:1vw;    
     margin-top:1vw;
     background-color: rgba(255, 255, 255, 1);
 }
 .thework div {
     width:25vw;
     height:fit-content;
-    font-weight: 100;
 }
-#explore {
+
+#toptext {
     margin-left: 5vw;
-    font-size: large;
-    font-weight: bold;
+    font-size: x-large;
 }
-.digital:hover #digital-hidden {
+body:has(.digital:hover) #digital-hidden{
     display:block;
+
+}
+body:has(.granssnitt:hover) #grans-hidden{
+    display: block;
 }
 #storm {
+    object-fit: cover;
+    height:634px;
     width:100%;
     padding:1vw;
+    padding-left:0;
+}
+#storm:hover {
+    
+    transition:ease-in-out 0.5s;
+}
+
+#grans {
+    object-fit: cover;
+    height:634px;
+    width:100%;
+    padding:1vw;
+    padding-left:0;
 }
 aside {
+    border:solid white 1vw;
+    position:-webkit-sticky;
+    position:sticky;
+    margin:auto;
+    height:auto;
+    margin-top:1vw;
     grid-area: as;
     background-color: rgb(200, 200, 200);
     color: black;
+    top:0;
 }
 #digital-hidden {
+    margin:1vw;
     display: none;
 }
 #grans-hidden {
+    margin:1vw;
     display: none;
 }
 #web-hidden {
+    margin:1vw;
     display: none;
 }
 #stupid-hidden {
+    margin:1vw;
     display: none;
 }
+
 footer {
     grid-area: ft;
     background-color: rgb(0, 0, 0);
@@ -83,10 +122,18 @@ footer {
 
 @media screen and (max-width:600px) {
 
+body{
+    grid-template-rows: 10% auto 20vw;
+}
+.digital {
+    flex-basis: 100%;
+}
 .granssnitt {
     flex-basis: 100%;
 }
-
+.webdesign {
+    flex-basis: 100%;
+}
 .stupid {
     flex-basis: 100%;
 }
