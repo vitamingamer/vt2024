@@ -11,7 +11,7 @@ body {
     grid-template-rows: 15vw auto 20vw;
     grid-template-areas: 
     'nav nav nav nav nav'
-    'ma ma ma as as'
+    'as as ma ma ma'
     'ft ft ft ft ft'
     ;
     background: white;
