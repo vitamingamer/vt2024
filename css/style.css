@@ -1,16 +1,17 @@
 @import url(https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap);
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "Kanit", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Hanken Grotesk","Kanit", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 15vw auto 20vw;
     grid-template-areas: 
-    'nav nav nav nav nav'
+    'nav nav ma ma ma'
     'as as ma ma ma'
     'ft ft ft ft ft'
     ;
@@ -25,7 +26,7 @@ nav {
     padding-top:3vw;
     padding-bottom: 1vw;
     font-size: xx-large;
-    font-weight: 700;
+    font-weight: 900;
 }
 nav a {
     text-decoration: none;
@@ -39,6 +40,7 @@ main {
     background-color: rgb(255, 255, 255);
     padding:1vw;
     margin:1vw;
+    margin-top:5vw;
     grid-area: ma;
 }
 .thework{
@@ -56,6 +58,7 @@ main {
 #toptext {
     margin-left: 5vw;
     font-size: x-large;
+    font-weight: 600;
 }
 body:has(.digital:hover) #digital-hidden{
     display:block;
@@ -64,24 +67,62 @@ body:has(.digital:hover) #digital-hidden{
 body:has(.granssnitt:hover) #grans-hidden{
     display: block;
 }
+body:has(.stupid:hover) #stupid-hidden{
+    display: block;
+}
+body:has(.webdesign:hover) #web-hidden{
+    display: block;
+}
+body:has(.aboutme:hover) #collage-hidden{
+    display: block;
+}
 #storm {
     object-fit: cover;
     height:634px;
     width:100%;
     padding:1vw;
-    padding-left:0;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 1px 2px rgba(75, 75, 75, 0.15);
+    transition: box-shadow 0.3s ease-in-out;
 }
 #storm:hover {
-    
-    transition:ease-in-out 0.5s;
+    box-shadow: 0 5px 15px rgba(75, 75, 75, 0.15);
 }
-
 #grans {
     object-fit: cover;
     height:634px;
     width:100%;
     padding:1vw;
-    padding-left:0;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 1px 2px rgba(75, 75, 75, 0.15);
+    transition: box-shadow 0.3s ease-in-out;
+}
+#grans:hover {
+    box-shadow: 0 5px 15px rgba(75, 75, 75, 0.15);
+}
+#webb {
+    object-fit: cover;
+    height:634px;
+    width:100%;
+    padding:1vw;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 1px 2px rgba(75, 75, 75, 0.15);
+    transition: box-shadow 0.3s ease-in-out;
+}
+#webb:hover {
+    box-shadow: 0 5px 15px rgba(75, 75, 75, 0.15);
+}
+#stupid {
+    object-fit: cover;
+    height:634px;
+    width:100%;
+    padding:1vw;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 1px 2px rgba(75, 75, 75, 0.15);
+    transition: box-shadow 0.3s ease-in-out;
+}
+#stupid:hover {
+    box-shadow: 0 5px 15px rgba(75, 75, 75, 0.15);
 }
 aside {
     border:solid white 1vw;
@@ -91,9 +132,25 @@ aside {
     height:auto;
     margin-top:1vw;
     grid-area: as;
-    background-color: rgb(200, 200, 200);
-    color: black;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     top:0;
+}
+#collage {
+    object-fit: cover;
+    height:634px;
+    width:100%;
+    padding:1vw;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 1px 2px rgba(75, 75, 75, 0.15);
+    transition: box-shadow 0.3s ease-in-out;
+}
+#collage:hover {
+    box-shadow: 0 5px 15px rgba(75, 75, 75, 0.15);
+}
+#collage-hidden {
+    margin:1vw;
+    display: none; 
 }
 #digital-hidden {
     margin:1vw;
@@ -136,6 +193,10 @@ body{
 }
 .stupid {
     flex-basis: 100%;
+}
+nav a:hover {
+    color:black;
+    background-color: white;
 }
 
 }
