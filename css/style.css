@@ -9,7 +9,7 @@
 body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 15vw auto 20vw;
+    grid-template-rows: 15vw auto 30em;
     grid-template-areas: 
     'nav nav ma ma ma'
     'as as ma ma ma'
@@ -75,6 +75,9 @@ body:has(.webdesign:hover) #web-hidden{
 }
 body:has(.aboutme:hover) #collage-hidden{
     display: block;
+}
+.aboutme img{
+    width: auto !important;
 }
 #storm {
     object-fit: cover;
@@ -177,9 +180,9 @@ footer {
     text-align: center;
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:1000px) {
 
-body{
+body {
     grid-template-rows: 10% auto 20vw;
 }
 .digital {
@@ -194,9 +197,18 @@ body{
 .stupid {
     flex-basis: 100%;
 }
+
 nav a:hover {
     color:black;
     background-color: white;
 }
+.aboutme img {
+    width: 250
+}
+footer {
+    height:30rem;
+}
+
+
 
 }
