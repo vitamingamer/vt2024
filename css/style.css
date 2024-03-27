@@ -9,7 +9,7 @@
 body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 15vw auto 30em;
+    grid-template-rows: 15vw auto 20em;
     grid-template-areas: 
     'nav nav ma ma ma'
     'as as ma ma ma'
@@ -179,7 +179,30 @@ footer {
     padding:5vw;
     text-align: center;
 }
-
+#insta {
+    max-width:30%;
+}
+#ball {
+    background-color:rgb(255, 0, 0);
+    width:3em;
+    height:3em;
+    border-radius:50%;
+    transition:0.7s;
+}
+#ball.active {
+    background-color:rgb(0, 0, 0);
+    width:3em;
+    height:3em;
+    border-radius:10%;
+    transition:0.7s;
+}
+#troll {
+    transition:0.7s;
+}
+#troll.active {
+    display: none;
+    transition: 0.7s;
+}
 @media screen and (max-width:1000px) {
 
 nav {
@@ -213,7 +236,9 @@ nav a:hover {
 footer {
     height:30rem;
 }
-
+#instabox {
+    display:none;
+}
 
 
 
